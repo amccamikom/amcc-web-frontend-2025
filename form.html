@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form</title>
+    </head>
+    <body>
+        <h1>Form Page</h1>
+
+        <h3>Identitas</h3>
+        <form>
+            <label for="username">email</label>
+            <input id="email" type="text" /> <br />
+
+            <label for="username">username</label>
+            <input id="username" type="text" /><br />
+
+            <input id="pria" type="radio" name="gender" value="L" />
+            <label for="pria">Pria</label>
+
+            <input id="wanita" type="radio" name="gender" value="P" />
+            <label for="wanita">Wanita</label><br />
+
+            <input type="file" /><br />
+
+            <label for="kategori">Pilih kategori: </label>
+            <select name="kategori" id="kategori">
+                <option value="member">Member</option>
+                <option value="umum">Umum</option>
+            </select>
+            <br />
+
+            <input id="term" type="checkbox" />
+            <label for="term">Sudah memenuhi persyaratan</label>
+            <br />
+
+            <input type="submit" />
+        </form>
+    </body>
+</html>
