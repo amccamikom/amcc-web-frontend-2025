@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Daftar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <!-- Logo -->
+      <!-- <img src="assets/AMCC LOGO Horizontal.svg" alt="Logo AMCC" width="200"> -->
+      <!-- Judul dan sub judul -->
+      <h1 class="title">AMCC DAFTAR</h1>
+      <p class="subtitle">Buat akun baru Anda</p>
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="name">Nama Lengkap</label>
+          <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Masukkan password Anda" required>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Konfirmasi Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Konfirmasi password Anda" required>
+        </div>
+
+        <div class="form-options">
+          <label class="remember-me">
+            <input type="checkbox" name="agree" required> Saya setuju dengan kebijakan
+          </label>
+        </div>
+
+        <button type="submit" class="login-btn">Daftar</button>
+      </form>
+
+      <div class="signup-link">
+        Sudah punya akun? <a href="index.html">Login di sini</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
