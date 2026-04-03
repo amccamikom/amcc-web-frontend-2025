@@ -1,0 +1,51 @@
+body { font-family: sans-serif; margin: 0; padding: 20px; padding-top: 60px;}
+section { margin-bottom: 40px; }
+h2 { color: #333; border-bottom: 2px solid #ccc; padding-bottom: 5px;}
+
+.box-block { background-color: #ff9999; padding: 10px; margin: 5px; border: 2px solid red;}
+.text-inline { background-color: #99ccff; padding: 10px; margin: 5px; border: 2px solid blue;}
+
+.box-content, .box-border { width: 200px; height: 100px; margin-bottom: 10px; color: white; padding: 20px; border: 10px solid black;}
+.box-content { background-color: #ffaa00; }
+.box-border { background-color: #00aa00; }
+
+.box-overflow { width: 200px; height: 100px; background-color: #ddd; border: 2px solid #555; margin-top: 10px;}
+
+.relative-container { width: 300px; height: 300px; background-color: #f0f0f0; border: 2px dashed #888; }
+.box-abs { width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;}
+.box-merah { background-color: red; }
+.box-kuning { background-color: orange; }
+.box-hijau { background-color: green; }
+
+.flex-container { background-color: #d1c4e9; padding: 10px; border: 3px solid #512da8; height: 200px; }
+.flex-item { background-color: #ffb300; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 24px; border: 2px solid #e65100; margin: 5px;}
+.navbar { background-color: #333; color: white; padding: 15px; text-align: center; }
+
+/* Styling dasar Grid (Belum di-grid-kan) */
+.grid-container { 
+    background-color: #2c3e50; 
+    padding: 20px; 
+    border: 3px solid #34495e;
+}
+.grid-item { 
+    color: white; 
+    font-size: 24px; 
+    font-weight: bold; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 80px; 
+}
+.g-merah { background-color: #e74c3c; }
+.g-hijau { background-color: #2ecc71; }
+.g-kuning { background-color: #f1c40f; }
+
+.box-anatomi {
+    background-color: #3498db;
+    color: white;
+    width: 200px;
+    height: 50px;
+}
+
+
+/* kode praktikum mulai dari sini */
