@@ -41,3 +41,138 @@ footer { text-align: center; padding: 20px; background-color: #2d3436; color: wh
 MULAI NGODING LAYOUT DI BAWAH INI
 ========================================
 */
+
+/* 1. LAYOUT NAVBAR */
+.navbar {
+    position: fixed; /* Membuat navbar menempel di layar */
+    top: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px 50px;
+    z-index: 999; /* Memastikan navbar selalu di lapisan paling depan */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    /* Flexbox untuk mensejajarkan logo dan menu */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex; /* Mensejajarkan list menu */
+    gap: 30px; /* Jarak antar menu */
+    list-style: none;
+}
+
+/* 2. LAYOUT HERO SECTION */
+.hero {
+    /* Padding atas besar agar tidak tertutup navbar fixed */
+    padding: 150px 10% 100px 10%; 
+    min-height: 100vh;
+    
+    /* Flexbox untuk Kiri (Teks) & Kanan (Gambar) */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    flex: 1; /* Mengambil sisa ruang yang ada */
+    padding-right: 50px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Menengahkan gambar di areanya */
+}
+
+/* 3. LAYOUT PROYEK (GRID) */
+.proyek-section {
+    padding: 50px 10%;
+}
+
+.grid-karya {
+    display: grid;
+    /* Membuat 3 kolom sama besar */
+    grid-template-columns: repeat(3, 1fr);
+    /* Jarak antar card */
+    gap: 30px; 
+}
+
+/* 4. LAYOUT SKILLS (FLEX-WRAP) */
+.skills-container {
+    display: flex;
+    justify-content: center; /* Rata tengah horizontal */
+    gap: 15px; /* Jarak antar badge */
+    
+    /* Agar elemen turun ke bawah jika ruang tidak cukup */
+    flex-wrap: wrap; 
+}
+
+/* 5. LAYOUT KONTAK (FLEXBOX) */
+.kontak-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.kontak-info {
+    flex: 1; /* Mengambil proporsi 1 bagian */
+}
+
+.kontak-form {
+    flex: 1; /* Mengambil proporsi 1 bagian agar seimbang */
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* 6. RESPONSIVE DESIGN (MOBILE) */
+@media screen and (max-width: 768px) {
+    /* Navbar menyesuaikan */
+    .navbar {
+        padding: 15px 20px;
+    }
+    
+    .nav-links {
+        display: none; /* Sembunyikan menu di mobile (buat simpel dulu) */
+    }
+
+    /* Hero menjadi atas-bawah */
+    .hero {
+        flex-direction: column; /* Mengubah arah flex dari baris ke kolom */
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    /* Grid dari 3 kolom menjadi 1 kolom */
+    .grid-karya {
+        grid-template-columns: 1fr;
+    }
+
+    /* Kontak menjadi atas-bawah */
+    .kontak-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .kontak-form {
+        padding: 20px; /* Kurangi padding di mobile agar tidak sempit */
+    }
+}
