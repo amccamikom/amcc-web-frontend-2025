@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles/output.css" rel="stylesheet" />
+    <title>Belajar DOM Manipulation</title>
+  </head>
+
+  <body class="bg-slate-100 p-6 font-sans">
+    <!--
+      =====================================================
+      SECTION 0 - PENGENALAN DOM
+      =====================================================
+
+      DOM (Document Object Model) adalah representasi HTML
+      dalam bentuk object JavaScript.
+
+      Dengan DOM kita bisa:
+      - mengambil element HTML
+      - mengubah isi HTML
+      - mengubah style
+      - menambah class
+      - membuat element baru
+      - menangani event
+    -->
+
+    <h1 id="judul" class="text-4xl font-bold mb-6">Belajar DOM Manipulation</h1>
+
+    <!--
+      =====================================================
+      SECTION 1 - SELECTING ELEMENT
+      =====================================================
+    -->
+
+    <div class="bg-white border-2 border-black p-5 mb-5 rounded-xl shadow">
+      <h2 class="text-2xl font-bold mb-3">1. Mengubah Konten HTML</h2>
+
+      <p id="text-content" class="mb-3">Halo ges, text ini nanti akan diubah menggunakan DOM.</p>
+
+      <button onclick="ubahKonten()" class="bg-gray-500 text-white px-4 py-2 rounded-lg">
+        Ubah Konten
+      </button>
+    </div>
+
+    <!--
+      =====================================================
+      SECTION 2 - MANIPULASI STYLE
+      =====================================================
+    -->
+
+    <div class="bg-white border-2 border-black p-5 mb-5 rounded-xl shadow">
+      <h2 class="text-2xl font-bold mb-3">2. Mengubah Style</h2>
+
+      <p id="text-style" class="mb-3">Aku akan berubah warna dan membesar.</p>
+
+      <button onclick="ubahStyle()" class="bg-gray-500 text-white px-4 py-2 rounded-lg">
+        Ubah Style
+      </button>
+    </div>
+
+    <!--
+      =====================================================
+      SECTION 3 - MANIPULASI CLASS
+      =====================================================
+    -->
+
+    <div class="bg-white border-2 border-black p-5 mb-5 rounded-xl shadow">
+      <h2 class="text-2xl font-bold mb-3">3. Manipulasi Class</h2>
+
+      <p id="text-class" class="mb-3">Aku punya class yang bisa berubah.</p>
+
+      <button onclick="tambahClass()" class="bg-green-600 text-white px-4 py-2 rounded-lg mr-2">
+        Tambah Class
+      </button>
+
+      <button onclick="hapusClass()" class="bg-red-500 text-white px-4 py-2 rounded-lg mr-2">
+        Hapus Class
+      </button>
+
+      <button onclick="toggleClass()" class="bg-gray-500 text-white px-4 py-2 rounded-lg">
+        Toggle Class
+      </button>
+    </div>
+
+    <!--
+      =====================================================
+      SECTION 4 - CREATE ELEMENT & APPEND
+      =====================================================
+    -->
+
+    <div class="bg-white border-2 border-black p-5 mb-5 rounded-xl shadow">
+      <h2 class="text-2xl font-bold mb-3">4. Create Element</h2>
+
+      <ul id="list-tech" class="list-disc ml-5 mb-3">
+        <li>HTML</li>
+        <li>CSS</li>
+      </ul>
+
+      <button onclick="tambahElement()" class="bg-gray-500 text-white px-4 py-2 rounded-lg">
+        Tambah Javascript
+      </button>
+    </div>
+
+    <!--
+      =====================================================
+      SECTION 5 - EVENT HANDLER
+      =====================================================
+    -->
+
+    <div class="bg-white border-2 border-black p-5 mb-5 rounded-xl shadow">
+      <h2 class="text-2xl font-bold mb-3">5. Event Handler</h2>
+
+      <button onclick="alertInline()" class="bg-black text-white px-4 py-2 rounded-lg mr-2">
+        Inline Event
+      </button>
+
+      <button id="btn-event-listener" class="bg-gray-500 text-white px-4 py-2 rounded-lg">
+        Event Listener
+      </button>
+    </div>
+
+    <!--
+      =====================================================
+      SECTION 6 - MANIPULASI STYLE TANPA HAPUS CLASS
+      =====================================================
+    -->
+
+    <div class="bg-white border-2 border-black p-5 rounded-xl shadow" id="box-style">
+      <h2 class="text-2xl font-bold mb-3">6. Manipulasi Style Specific</h2>
+
+      <p class="mb-3">Background bisa diubah tanpa menghapus class lain.</p>
+
+      <button onclick="ubahBackground()" class="bg-gray-500 text-white px-4 py-2 rounded-lg">
+        Ubah Background
+      </button>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
