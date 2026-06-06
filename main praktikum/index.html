@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Manajemen AMCC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* === MINIMALIST DESIGN SYSTEM === */
+        :root {
+            --bg-color: #f9fafb;
+            --card-bg: #ffffff;
+            --text-main: #111827;
+            --text-muted: #6b7280;
+            --border: #e5e7eb;
+            --accent: #0f172a;
+            --accent-hover: #334155;
+            --radius: 8px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* HEADER */
+        .header {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+        }
+        .header h2 { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.025em; }
+        .header p { color: var(--text-muted); font-size: 0.875rem; margin-top: 0.25rem; }
+
+        /* TOOLBAR KONTROL */
+        .toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .btn-group { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .search-box { display: flex; gap: 0.5rem; }
+
+        /* KOMPONEN INPUT & TOMBOL */
+        button {
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+        button:hover { background-color: var(--bg-color); border-color: #d1d5db; }
+        
+        button.primary { background-color: var(--accent); color: white; border-color: var(--accent); }
+        button.primary:hover { background-color: var(--accent-hover); }
+
+        input[type="text"] {
+            padding: 0.5rem 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            font-size: 0.875rem;
+            outline: none;
+            width: 250px;
+            font-family: inherit;
+        }
+        input[type="text"]:focus { border-color: #9ca3af; }
+
+        /* AREA DATA (RENDER JS) */
+        #list-member {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        /* DESAIN CARD GENERATE JS */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+        .card:hover { border-color: #d1d5db; transform: translateY(-1px); }
+        
+        .card-info h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem; }
+        .card-info p { font-size: 0.875rem; color: var(--text-muted); }
+        
+        .card-score { display: flex; align-items: center; gap: 1rem; }
+        .score-num { font-weight: 600; font-size: 1rem; }
+        
+        .badge {
+            font-size: 0.75rem;
+            font-weight: 500;
+            padding: 0.25rem 0.6rem;
+            border-radius: 9999px;
+            background-color: #f3f4f6;
+            color: #374151;
+        }
+        .badge.cumlaude { background-color: #fef3c7; color: #92400e; border: 1px solid #fde68a;}
+        
+        .empty-state { text-align: center; color: var(--text-muted); padding: 3rem; border: 1px dashed var(--border); border-radius: var(--radius); }
+        .total-state { font-size: 1.25rem; font-weight: 600; text-align: center; padding: 2rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>Sistem Informasi Data AMCC</h2>
+        <p>Manajemen data member menggunakan Higher Order Function JavaScript.</p>
+    </div>
+
+    <div class="toolbar">
+        <div class="btn-group">
+            <button id="btn-semua">Semua Data</button>
+            <button id="btn-web">Divisi Web</button>
+            <button id="btn-sort">Ranking Skor</button>
+            <button id="btn-total">Hitung Total</button>
+            <button id="btn-export" class="primary">Export JSON</button>
+        </div>
+        <div class="search-box">
+            <input type="text" id="input-cari" placeholder="Cari nama member (Ex: Alya)...">
+            <button id="btn-cari" class="primary">Cari</button>
+        </div>
+    </div>
+
+    <div id="list-member">
+        </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
