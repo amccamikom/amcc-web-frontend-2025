@@ -1,0 +1,17 @@
+{
+  "name": "movie-finder",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css",
+    "dev": "npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.1",
+    "tailwindcss": "^4.3.1"
+  }
+}

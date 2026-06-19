@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎬 Movie Finder</title>
+    <link rel="stylesheet" href="styles/output.css" />
+  </head>
+
+  <body class="bg-gray-900 text-white min-h-screen">
+    <!-- HEADER -->
+    <header class="text-center py-12 px-4">
+      <h1 class="text-5xl font-bold text-yellow-400 mb-2">🎬 Movie Finder</h1>
+      <p class="text-gray-400">Search any movie using OMDb API</p>
+    </header>
+
+    <!-- SEARCH BAR -->
+    <section class="flex justify-center px-4 mb-10">
+      <div class="flex w-full max-w-xl gap-3">
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search a movie..."
+          class="flex-1 px-4 py-3 rounded-xl bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+        />
+        <button
+          id="searchBtn"
+          class="px-6 py-3 bg-yellow-400 text-gray-900 font-bold rounded-xl hover:bg-yellow-300 transition"
+        >
+          Search
+        </button>
+      </div>
+    </section>
+
+    <!-- LOADING STATE -->
+    <div id="loading" class="text-center py-10 hidden">
+      <p class="text-gray-400 text-lg">🔍 Searching...</p>
+    </div>
+
+    <!-- EMPTY STATE -->
+    <div id="emptyState" class="text-center py-16 hidden">
+      <p class="text-5xl mb-3">🎭</p>
+      <p class="text-gray-400 text-lg">No movies found. Try another keyword!</p>
+    </div>
+
+    <!-- MOVIE GRID -->
+    <main
+      id="movieGrid"
+      class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto px-6 pb-16"
+    ></main>
+
+    <!-- MODAL DETAIL -->
+    <div id="modalOverlay" class="modal-overlay hidden fixed inset-0 bg-black/75 p-4 z-50">
+      <div
+        id="modalBox"
+        class="relative bg-gray-800 rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto"
+      >
+        <button
+          id="modalClose"
+          class="absolute top-3 right-3 bg-gray-700 hover:bg-gray-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm cursor-pointer border-0"
+        >
+          ✕
+        </button>
+        <div id="modalContent"><!-- diisi oleh JS --></div>
+      </div>
+    </div>
+
+    <!-- Urutan load penting: config → api → render → main -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
